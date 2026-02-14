@@ -1,60 +1,153 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>NetShield - Cyber Security Project</title>
+    <title>NetShield | Cybersecurity Detection System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Arial;
-            background-color: #0f172a;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
             color: white;
-            text-align: center;
-            padding: 40px;
         }
 
-        h1 {
+        header {
+            background: #020617;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
             color: #38bdf8;
         }
 
-        .section {
-            background-color: #1e293b;
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 10px;
-            width: 75%;
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
         }
 
-        ul {
-            text-align: left;
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            color: #38bdf8;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        .button {
+            background: #ef4444;
+            padding: 12px 25px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
 
-<h1>🛡 NetShield</h1>
-<h2>Early Detection of Security Vulnerabilities in Networked Devices</h2>
+<header>
+    <h1>🛡 NetShield</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#tech">Technology</a>
+    </nav>
+</header>
 
-<div class="section">
-    <h3>Problem Statement</h3>
+<section class="hero">
+    <h2>Early Detection of Security Vulnerabilities</h2>
     <p>
-        Networked devices are vulnerable due to insecure communication,
-        missing security headers, and exposed server configurations.
+        Advanced monitoring system that detects insecure communication,
+        missing security headers, and exposed configurations in networked devices.
     </p>
-</div>
+    <a href="#features" class="button">Explore Features</a>
+</section>
 
-<div class="section">
-    <h3>Our Solution</h3>
-    <ul>
-        <li>Detect HTTP vs HTTPS usage</li>
-        <li>Check missing security headers</li>
-        <li>Detect server exposure</li>
-        <li>Classify risk levels</li>
-    </ul>
-</div>
+<section id="about" class="section">
+    <h2>About The Project</h2>
+    <p>
+        NetShield is designed to proactively identify security weaknesses
+        in routers, IoT devices, and web-based network systems before attackers exploit them.
+    </p>
+</section>
 
-<div class="section">
-    <h3>Technologies Used</h3>
-    <p>Python, Flask, HTML, CSS</p>
-</div>
+<section id="features" class="section">
+    <h2>Core Features</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>HTTPS Detection</h3>
+            <p>Identifies insecure HTTP communication.</p>
+        </div>
+        <div class="card">
+            <h3>Header Analysis</h3>
+            <p>Detects missing security headers.</p>
+        </div>
+        <div class="card">
+            <h3>Server Exposure</h3>
+            <p>Reveals exposed server information.</p>
+        </div>
+        <div class="card">
+            <h3>Risk Classification</h3>
+            <p>Classifies vulnerabilities by severity level.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tech" class="section">
+    <h2>Technology Stack</h2>
+    <p>Python • Flask • HTML • CSS • GitHub Pages</p>
+</section>
+
+<footer>
+    © 2026 NetShield | Cybersecurity Project
+</footer>
 
 </body>
 </html>
